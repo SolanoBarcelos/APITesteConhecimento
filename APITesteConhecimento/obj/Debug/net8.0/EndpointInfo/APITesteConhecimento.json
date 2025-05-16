@@ -1,0 +1,157 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "APITesteConhecimento",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/v1/contatos/up": {
+      "get": {
+        "tags": [
+          "Contato"
+        ],
+        "summary": "Rota UP.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/contatos/get-all": {
+      "get": {
+        "tags": [
+          "Contato"
+        ],
+        "summary": "Rota para listar todos contatos - Get todos contatos.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/contatos/create": {
+      "post": {
+        "tags": [
+          "Contato"
+        ],
+        "summary": "Rota para criar um contato.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContatoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContatoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContatoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/contatos/update/{id_contato}": {
+      "patch": {
+        "tags": [
+          "Contato"
+        ],
+        "summary": "Rota para atualizar um contato por id.",
+        "parameters": [
+          {
+            "name": "id_contato",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContatoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContatoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContatoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/contatos/delete/{id_contato}": {
+      "delete": {
+        "tags": [
+          "Contato"
+        ],
+        "summary": "Rota para deletar um contato por id.",
+        "parameters": [
+          {
+            "name": "id_contato",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ContatoDTO": {
+        "type": "object",
+        "properties": {
+          "id_contato": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "nome_contato": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefone_contato": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

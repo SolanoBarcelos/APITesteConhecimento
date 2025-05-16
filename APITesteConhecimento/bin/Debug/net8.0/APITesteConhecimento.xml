@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>APITesteConhecimento</name>
+    </assembly>
+    <members>
+        <member name="M:APITesteConhehecimento.Controllers.ContatoController.Up">
+            <summary>
+            Rota UP.
+            </summary>
+            <returns>Rota UP.</returns>
+        </member>
+        <member name="M:APITesteConhehecimento.Controllers.ContatoController.GetAll">
+            <summary>
+            Rota para listar todos contatos - Get todos contatos.
+            </summary>
+            <returns>Lista todos contatos.</returns>
+        </member>
+        <member name="M:APITesteConhehecimento.Controllers.ContatoController.Create(CoreContato.DTOs.ContatoDTO)">
+            <summary>
+            Rota para criar um contato.
+            </summary>
+            <returns>Create Contato.</returns>
+        </member>
+        <member name="M:APITesteConhehecimento.Controllers.ContatoController.Update(System.Int32,CoreContato.DTOs.ContatoDTO)">
+            <summary>
+            Rota para atualizar um contato por id.
+            </summary>
+            <returns>Update Contato.</returns>
+        </member>
+        <member name="M:APITesteConhehecimento.Controllers.ContatoController.Delete(System.Int32)">
+            <summary>
+            Rota para deletar um contato por id.
+            </summary>
+            <returns>Delete Contato.</returns>
+        </member>
+        <member name="T:APITesteConhecimento.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:APITesteConhecimento.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APITesteConhecimento.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APITesteConhecimento.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APITesteConhecimento.Migrations.AtualizaContatoConstraints">
+            <inheritdoc />
+        </member>
+        <member name="M:APITesteConhecimento.Migrations.AtualizaContatoConstraints.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APITesteConhecimento.Migrations.AtualizaContatoConstraints.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APITesteConhecimento.Migrations.AtualizaContatoConstraints.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
